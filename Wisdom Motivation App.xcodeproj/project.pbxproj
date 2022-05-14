@@ -13,6 +13,13 @@
 		A017B72E282B522600E5D416 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A017B72D282B522600E5D416 /* Preview Assets.xcassets */; };
 		A017B730282B522600E5D416 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017B72F282B522600E5D416 /* Persistence.swift */; };
 		A017B733282B522600E5D416 /* Wisdom_Motivation_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A017B731282B522600E5D416 /* Wisdom_Motivation_App.xcdatamodeld */; };
+		A017B73A282B526000E5D416 /* WisdomMotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017B739282B526000E5D416 /* WisdomMotivationView.swift */; };
+		A017B73E282B52F600E5D416 /* QuotationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017B73D282B52F600E5D416 /* QuotationDisplayView.swift */; };
+		A017B740282B564600E5D416 /* MotivationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017B73F282B564600E5D416 /* MotivationData.swift */; };
+		A0254052282DF7C000C1CA2F /* TesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0254051282DF7C000C1CA2F /* TesterView.swift */; };
+		A0330E76282C913A00A85633 /* BackgroundAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0330E75282C913A00A85633 /* BackgroundAnimationView.swift */; };
+		A0330E78282CA46F00A85633 /* Motivation.csv in Resources */ = {isa = PBXBuildFile; fileRef = A0330E77282CA46F00A85633 /* Motivation.csv */; };
+		A04C9B9A282CB35E002D9378 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C9B99282CB35E002D9378 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		A017B72D282B522600E5D416 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A017B72F282B522600E5D416 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A017B732282B522600E5D416 /* Wisdom_Motivation_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wisdom_Motivation_App.xcdatamodel; sourceTree = "<group>"; };
+		A017B739282B526000E5D416 /* WisdomMotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisdomMotivationView.swift; sourceTree = "<group>"; };
+		A017B73D282B52F600E5D416 /* QuotationDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotationDisplayView.swift; sourceTree = "<group>"; };
+		A017B73F282B564600E5D416 /* MotivationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationData.swift; sourceTree = "<group>"; };
+		A0254051282DF7C000C1CA2F /* TesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesterView.swift; sourceTree = "<group>"; };
+		A0330E75282C913A00A85633 /* BackgroundAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationView.swift; sourceTree = "<group>"; };
+		A0330E77282CA46F00A85633 /* Motivation.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Motivation.csv; sourceTree = "<group>"; };
+		A04C9B99282CB35E002D9378 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,7 @@
 		A017B71A282B522400E5D416 = {
 			isa = PBXGroup;
 			children = (
+				A0254051282DF7C000C1CA2F /* TesterView.swift */,
 				A017B725282B522500E5D416 /* Wisdom Motivation App */,
 				A017B724282B522500E5D416 /* Products */,
 			);
@@ -55,9 +70,13 @@
 		A017B725282B522500E5D416 /* Wisdom Motivation App */ = {
 			isa = PBXGroup;
 			children = (
-				A017B726282B522500E5D416 /* Wisdom_Motivation_AppApp.swift */,
+				A04C9B98282CB338002D9378 /* App */,
+				A04C9B97282CB32B002D9378 /* Utility */,
+				A017B73C282B52D800E5D416 /* View */,
+				A017B73B282B527100E5D416 /* Model */,
 				A017B728282B522500E5D416 /* ContentView.swift */,
 				A017B72A282B522600E5D416 /* Assets.xcassets */,
+				A0330E77282CA46F00A85633 /* Motivation.csv */,
 				A017B72F282B522600E5D416 /* Persistence.swift */,
 				A017B731282B522600E5D416 /* Wisdom_Motivation_App.xcdatamodeld */,
 				A017B72C282B522600E5D416 /* Preview Content */,
@@ -71,6 +90,40 @@
 				A017B72D282B522600E5D416 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A017B73B282B527100E5D416 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A017B73F282B564600E5D416 /* MotivationData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A017B73C282B52D800E5D416 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A017B739282B526000E5D416 /* WisdomMotivationView.swift */,
+				A017B73D282B52F600E5D416 /* QuotationDisplayView.swift */,
+				A0330E75282C913A00A85633 /* BackgroundAnimationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A04C9B97282CB32B002D9378 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A04C9B99282CB35E002D9378 /* Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		A04C9B98282CB338002D9378 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A017B726282B522500E5D416 /* Wisdom_Motivation_AppApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A017B72E282B522600E5D416 /* Preview Assets.xcassets in Resources */,
+				A0330E78282CA46F00A85633 /* Motivation.csv in Resources */,
 				A017B72B282B522600E5D416 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,8 +199,14 @@
 			files = (
 				A017B730282B522600E5D416 /* Persistence.swift in Sources */,
 				A017B729282B522500E5D416 /* ContentView.swift in Sources */,
+				A04C9B9A282CB35E002D9378 /* Utility.swift in Sources */,
 				A017B733282B522600E5D416 /* Wisdom_Motivation_App.xcdatamodeld in Sources */,
+				A0330E76282C913A00A85633 /* BackgroundAnimationView.swift in Sources */,
+				A017B73A282B526000E5D416 /* WisdomMotivationView.swift in Sources */,
+				A017B73E282B52F600E5D416 /* QuotationDisplayView.swift in Sources */,
+				A0254052282DF7C000C1CA2F /* TesterView.swift in Sources */,
 				A017B727282B522500E5D416 /* Wisdom_Motivation_AppApp.swift in Sources */,
+				A017B740282B564600E5D416 /* MotivationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = MotivationColors;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wisdom Motivation App/Preview Content\"";
@@ -292,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,7 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = MotivationColors;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wisdom Motivation App/Preview Content\"";
@@ -321,7 +381,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
