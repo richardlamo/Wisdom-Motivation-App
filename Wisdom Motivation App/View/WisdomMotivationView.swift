@@ -25,7 +25,7 @@ struct WisdomMotivationView: View {
     
     @State var imageIndex = 1
 
-    let maxImageIndex = 19
+    let maxImageIndex = 22
     
     let imagePrefix = "fav - "
 
@@ -97,6 +97,7 @@ struct WisdomMotivationView_Previews: PreviewProvider {
     static var previews: some View {
         WisdomMotivationView(allItems: .constant([]), demo: true )
             .preferredColorScheme(.dark)
+            .previewInterfaceOrientation(.landscapeLeft)
         WisdomMotivationView(allItems: .constant([]), demo: true)
             .preferredColorScheme(.light)
             

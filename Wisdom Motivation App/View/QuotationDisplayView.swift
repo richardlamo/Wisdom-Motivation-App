@@ -34,7 +34,7 @@ struct QuotationDisplayView: View {
                 }
                 if let author = self.author {
                     Text("\(author)")
-                        .padding(.leading, 250)
+                        .padding(.leading, 180)
                         .font(.system(size: 20))
                         .foregroundStyle(Color("MotivationColors"))
                         .shadow(color: .black, radius: 7)
@@ -54,6 +54,6 @@ struct QuotationDisplayView: View {
 struct QuotationDisplayView_Previews: PreviewProvider {
     static var previews: some View {
         let demoQuote = "Morning Habits <br>Hydrate first<br>Exercise<br>Plan your day the night before<br>"
-        QuotationDisplayView(author: "Ian Fleming", quote: demoQuote)
+        QuotationDisplayView(author: "Arnold Schwarzenegger", quote: demoQuote)
     }
 }
