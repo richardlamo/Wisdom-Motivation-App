@@ -13,6 +13,8 @@ struct WisdomMotivationView: View {
     
     @Binding var allItems : [Motivation]
     
+    @State private var orientation = UIDeviceOrientation.unknown
+    
     var demo = false
     
     let quoteCyclePeriod = 12.0
@@ -82,10 +84,11 @@ struct WisdomMotivationView: View {
             }
             
         }
-
         .onAppear() {
 
         }
+        
+
     }
 
     

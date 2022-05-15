@@ -11,14 +11,17 @@ struct BackgroundAnimationView: View {
     
     var backGroundImage : String?
     
-    let defaultBackground = "fav - 19"
+    let defaultBackground = "fav - 18"
     
     var body: some View {
         ZStack {
             Image(uiImage: UIImage(named: backGroundImage ?? defaultBackground)!)
                 .resizable()
                 .scaledToFill()
-                .frame(width : 400 ,height: 950, alignment: .center)
+ //               .frame(width : 500 ,height: 950, alignment: .center)
+                .frame(width:UIScreen.main.bounds.width,
+                       height:UIScreen.main.bounds.height,
+                       alignment: .center)
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
 //                .clipped()
                 
@@ -29,14 +32,17 @@ struct BackgroundAnimationView: View {
 //            }
             
         }
-        // .animation(.easeIn(duration: 1))
+        .animation(.easeIn(duration: 1))
     }
 }
 
 struct BackgroundAnimationView_Previews: PreviewProvider {
     static var previews: some View {
         BackgroundAnimationView()
-            .previewInterfaceOrientation(.landscapeLeft)
+            .previewInterfaceOrientation(.landscapeRight)
+            .preferredColorScheme(.dark)
+        BackgroundAnimationView()
+            .previewInterfaceOrientation(.portrait)
             .preferredColorScheme(.dark)
     }
 }

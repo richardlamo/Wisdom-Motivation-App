@@ -25,8 +25,8 @@ struct QuotationDisplayView: View {
                     Text("\(item)")
                         .padding(.top,2)
                         .padding(.bottom, 2)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
+                        .padding(.leading, 30)
+                        .padding(.trailing, 30)
                         .font(.system(size: 28))
                         .foregroundStyle(Color("MotivationColors"))
                         .shadow(color: .black, radius: 4)
@@ -40,7 +40,10 @@ struct QuotationDisplayView: View {
                         .shadow(color: .black, radius: 7)
                 }
             }
-            .animation(.easeInOut(duration: 2))
+            .animation(.easeInOut(duration: 1.5))
+            .frame(width:UIScreen.main.bounds.width,
+                   height:UIScreen.main.bounds.height,
+                   alignment: .center)
         }
 
     }
@@ -55,5 +58,6 @@ struct QuotationDisplayView_Previews: PreviewProvider {
     static var previews: some View {
         let demoQuote = "Morning Habits <br>Hydrate first<br>Exercise<br>Plan your day the night before<br>"
         QuotationDisplayView(author: "Arnold Schwarzenegger", quote: demoQuote)
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
