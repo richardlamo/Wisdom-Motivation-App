@@ -13,17 +13,19 @@ struct BackgroundAnimationView: View {
     
     let defaultBackground = "fav - 18"
     
+    @State private var deviceWidth = UIScreen.main.bounds.width
+    
+    @State private var deviceHeight = UIScreen.main.bounds.height
+    
     var body: some View {
         ZStack {
             Image(uiImage: UIImage(named: backGroundImage ?? defaultBackground)!)
                 .resizable()
                 .scaledToFill()
- //               .frame(width : 500 ,height: 950, alignment: .center)
-                .frame(width:UIScreen.main.bounds.width,
-                       height:UIScreen.main.bounds.height,
+                .frame(width: deviceWidth,
+                       height: deviceHeight,
                        alignment: .center)
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-//                .clipped()
                 
 //            Canvas {
 //                context, size in
@@ -33,6 +35,11 @@ struct BackgroundAnimationView: View {
             
         }
         .animation(.easeIn(duration: 1))
+        .onRotate {
+            newOrientation in
+                self.deviceWidth = UIScreen.main.bounds.width
+                self.deviceHeight = UIScreen.main.bounds.height
+        }
     }
 }
 

@@ -7,12 +7,17 @@
 
 import SwiftUI
 
+
+
+
 struct WisdomMotivationView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
     @Binding var allItems : [Motivation]
     
+    var allImages : [Int]
+
     @State private var orientation = UIDeviceOrientation.unknown
     
     var demo = false
@@ -21,24 +26,21 @@ struct WisdomMotivationView: View {
     
     let imageCyclePeriod = 24.0
     
-    let demoQuote = "Morning Habits <br>Hydrate first<br>Exercise<br>Plan your day the night before<br>"
+    let demoQuote = "Morning Habits <br>Hydrate first sf sdf sdf sdf sdfsdf sdf sdf sf sdf sdf sd sd sdf<br>Exercise<br>Plan your day the night before<br>"
     
     @State var indexOfMotivation = 0
     
     @State var imageIndex = 1
 
-    let maxImageIndex = 22
+
     
     let imagePrefix = "fav - "
 
     var body: some View {
         let quoteTimer = Timer.publish(every: quoteCyclePeriod, on: .main, in: .common).autoconnect()
         
-//        let backgroundTimer = Timer.publish(every: imageCyclePeriod, on: .main, in: .common).autoconnect()
-
-        
         ZStack (alignment: .leading) {
-            BackgroundAnimationView(backGroundImage: imagePrefix + String(imageIndex))
+            BackgroundAnimationView(backGroundImage: imagePrefix + String(allImages[imageIndex-1]))
             if !allItems.isEmpty {
                 let itemAuthor = allItems[indexOfMotivation].author
                 let itemContent = allItems[indexOfMotivation].content
@@ -77,9 +79,9 @@ struct WisdomMotivationView: View {
             if indexOfMotivation > allItems.count-1 {
                 indexOfMotivation = 0
             }
+            
             imageIndex += 1
-            print("Image \(imageIndex)")
-            if imageIndex > maxImageIndex {
+            if (imageIndex > allImages.count) {
                 imageIndex = 1
             }
             
@@ -87,7 +89,6 @@ struct WisdomMotivationView: View {
         .onAppear() {
 
         }
-        
 
     }
 
@@ -98,10 +99,10 @@ struct WisdomMotivationView: View {
 
 struct WisdomMotivationView_Previews: PreviewProvider {
     static var previews: some View {
-        WisdomMotivationView(allItems: .constant([]), demo: true )
+        WisdomMotivationView(allItems: .constant([]), allImages: [8], demo: true )
             .preferredColorScheme(.dark)
             .previewInterfaceOrientation(.landscapeLeft)
-        WisdomMotivationView(allItems: .constant([]), demo: true)
+        WisdomMotivationView(allItems: .constant([]), allImages: [8], demo: true)
             .preferredColorScheme(.light)
             
     }

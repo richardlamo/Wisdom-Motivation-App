@@ -15,9 +15,18 @@ struct Wisdom_Motivation_AppApp: App {
 
     @State private var  motivationItems:[Motivation] = []
     
+    private var imageItems:[Int] = []
+
+    init() {
+        imageItems = stride(from: 1, through: 22, by: 1).shuffled()
+        print("\(imageItems)")
+    }
+    
     var body: some Scene {
+        
+
         WindowGroup {
-            WisdomMotivationView(allItems: $motivationItems)
+            WisdomMotivationView(allItems: $motivationItems, allImages: imageItems)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .onAppear() {
                     fetchRecords()
