@@ -27,11 +27,6 @@ struct BackgroundAnimationView: View {
                        alignment: .center)
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
-//            Canvas {
-//                context, size in
-//                let image = Image(systemName: "sparkle")
-//                context.draw(image, at: CGPoint(x:0.5 * size.width, y:0.5 * size.height))
-//            }
             
         }
         .animation(.easeIn(duration: 1))

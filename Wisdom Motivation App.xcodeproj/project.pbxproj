@@ -20,6 +20,8 @@
 		A0330E76282C913A00A85633 /* BackgroundAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0330E75282C913A00A85633 /* BackgroundAnimationView.swift */; };
 		A0330E78282CA46F00A85633 /* Motivation.csv in Resources */ = {isa = PBXBuildFile; fileRef = A0330E77282CA46F00A85633 /* Motivation.csv */; };
 		A04C9B9A282CB35E002D9378 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C9B99282CB35E002D9378 /* Utility.swift */; };
+		A0C8AC7528979E830055FF48 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8AC7428979E830055FF48 /* ConfigurationView.swift */; };
+		A0C8AC7728979EBF0055FF48 /* ListConfigurationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8AC7628979EBF0055FF48 /* ListConfigurationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		A0330E75282C913A00A85633 /* BackgroundAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationView.swift; sourceTree = "<group>"; };
 		A0330E77282CA46F00A85633 /* Motivation.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Motivation.csv; sourceTree = "<group>"; };
 		A04C9B99282CB35E002D9378 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		A0C8AC7428979E830055FF48 /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
+		A0C8AC7628979EBF0055FF48 /* ListConfigurationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConfigurationsView.swift; sourceTree = "<group>"; };
 		A0F27A632830DB9F000B0A6D /* Wisdom-Motivation-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Wisdom-Motivation-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,8 @@
 				A017B739282B526000E5D416 /* WisdomMotivationView.swift */,
 				A017B73D282B52F600E5D416 /* QuotationDisplayView.swift */,
 				A0330E75282C913A00A85633 /* BackgroundAnimationView.swift */,
+				A0C8AC7428979E830055FF48 /* ConfigurationView.swift */,
+				A0C8AC7628979EBF0055FF48 /* ListConfigurationsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,12 +214,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A017B730282B522600E5D416 /* Persistence.swift in Sources */,
+				A0C8AC7728979EBF0055FF48 /* ListConfigurationsView.swift in Sources */,
 				A017B729282B522500E5D416 /* ContentView.swift in Sources */,
 				A04C9B9A282CB35E002D9378 /* Utility.swift in Sources */,
 				A017B733282B522600E5D416 /* Wisdom_Motivation_App.xcdatamodeld in Sources */,
 				A0330E76282C913A00A85633 /* BackgroundAnimationView.swift in Sources */,
 				A017B73A282B526000E5D416 /* WisdomMotivationView.swift in Sources */,
 				A017B73E282B52F600E5D416 /* QuotationDisplayView.swift in Sources */,
+				A0C8AC7528979E830055FF48 /* ConfigurationView.swift in Sources */,
 				A0254052282DF7C000C1CA2F /* TesterView.swift in Sources */,
 				A017B727282B522500E5D416 /* Wisdom_Motivation_AppApp.swift in Sources */,
 				A017B740282B564600E5D416 /* MotivationData.swift in Sources */,

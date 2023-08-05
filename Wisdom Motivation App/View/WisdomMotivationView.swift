@@ -32,7 +32,7 @@ struct WisdomMotivationView: View {
     
     @State var imageIndex = 1
 
-
+    @State private var configurationAppearance = 0.0
     
     let imagePrefix = "fav - "
 
@@ -40,6 +40,13 @@ struct WisdomMotivationView: View {
         let quoteTimer = Timer.publish(every: quoteCyclePeriod, on: .main, in: .common).autoconnect()
         
         ZStack (alignment: .leading) {
+            ConfigurationView()
+                .offset(y: 20)
+                .zIndex(100.0)
+                .opacity(configurationAppearance)
+                .animation(.easeIn(duration: 1))
+
+            
             BackgroundAnimationView(backGroundImage: imagePrefix + String(allImages[imageIndex-1]))
             if !allItems.isEmpty {
                 let itemAuthor = allItems[indexOfMotivation].author
@@ -83,6 +90,14 @@ struct WisdomMotivationView: View {
             imageIndex += 1
             if (imageIndex > allImages.count) {
                 imageIndex = 1
+            }
+            
+        }
+        .onTapGesture {
+            if configurationAppearance > 0 {
+                configurationAppearance = 0.0
+            } else  {
+                configurationAppearance = 1.0
             }
             
         }
