@@ -57,13 +57,13 @@ struct QuotationDisplayView: View {
                         .shadow(color: .black, radius: 6)
 
                 }
-                if let author = self.author {
+                let author =
                     Text("\(author)")
                         .padding(.leading, 180)
                         .font(.system(size: 22))
                         .foregroundStyle(Color("MotivationColors"))
                         .shadow(color: .black, radius: 8)
-                }
+                
             }
             .animation(.easeInOut(duration: 1.5))
             .frame(width:deviceWidth,
